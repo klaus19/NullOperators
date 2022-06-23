@@ -5,5 +5,7 @@ fun main(){
 
     println(str!!.length)
 
+    val prints: Int? = null
 
+    println(prints!!.inc())
 }
