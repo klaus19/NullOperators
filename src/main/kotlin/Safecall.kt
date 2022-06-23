@@ -26,4 +26,21 @@ fun main(){
         println(bo.codePointAt(0))
     }
 
+    // the run() method operates only when we use this reference instead of a function parameter:
+
+    //creates a list of names
+
+    var stringlist:List<String?> = listOf("Zack","mac","gjf",null)
+
+    //create a new list
+
+    var newList = listOf<String?>()
+
+    for (item in stringlist){
+        //executes for non-nullable values
+        item?.run { newList = newList.plus(this)  }
+        item?.also { it-> println(it) }
+    }
+
+
 }
